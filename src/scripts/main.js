@@ -2,7 +2,10 @@
 
 const wall = document.querySelector('.wall');
 const spider = document.querySelector('.spider');
+const wallWidth = wall.clientWidth;
+const wallHeight = wall.clientHeight;
+const spiderWidth = spider.clientWidth;
+const spiderHeight = spider.clientHeight;
 
-wall.style.display = 'flex';
-spider.style.justifySelf = 'anchor-center';
-spider.style.alignSelf = 'anchor-center';
+spider.style.top = `${(wallHeight - spiderHeight) / 2}px`;
+spider.style.left = `${(wallWidth - spiderWidth) / 2}px`;
